@@ -474,7 +474,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751250146936875963}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &1400060077628336545
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1400060077792112783}
+  - component: {fileID: 5670363936033473313}
   m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
@@ -606,6 +607,24 @@ Transform:
   m_Father: {fileID: 1400060077918457488}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &5670363936033473313
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400060077792112776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Height: 4
+  m_Radius: 0.75
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &1400060077918457489
 GameObject:
   m_ObjectHideFlags: 0

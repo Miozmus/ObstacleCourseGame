@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     //pauza
     private bool paused = false;
 
+
     private void Movement()
     {
         if (!IsDashing)
@@ -242,13 +243,17 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.C))
         {
             UpViewCam.SetActive(false);
+            UpViewCam.GetComponent<AudioListener>().enabled = false;
             BackViewCam.SetActive(true);
+            BackViewCam.GetComponent<AudioListener>().enabled = true;
         }
         else
         {
             UpViewCam.SetActive(true);
+            UpViewCam.GetComponent<AudioListener>().enabled = true;
             BackViewCam.SetActive(false);
-            
+            BackViewCam.GetComponent<AudioListener>().enabled = false;
+
         }
         
     }
