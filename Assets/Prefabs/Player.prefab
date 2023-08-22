@@ -606,6 +606,8 @@ MonoBehaviour:
   characterController: {fileID: 1141313525}
   UpViewCam: {fileID: 1400060079216471058}
   BackViewCam: {fileID: 751250146936875963}
+  dashBar: {fileID: 0}
+  timer: {fileID: 0}
   movespeed: 24
   timeToMaxSpeed: 0.26
   timeToLoseMaxSpeed: 0.2

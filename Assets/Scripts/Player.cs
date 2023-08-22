@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public CharacterController characterController;
     public GameObject UpViewCam;
     public GameObject BackViewCam;
+    public DashBar dashBar;
 
     //Ruch
     [Header("Movement")]
@@ -138,6 +139,10 @@ public class Player : MonoBehaviour
 
     private void Dashing()
     {
+        if (!CanDashNow)//Jeœli nie mo¿na wykonaæ 
+        {
+            dashBar.SetCurrentValue(Time.time - dashBeginTime);
+        }
         if(!IsDashing) //Nie wykonujemy zrywu
         {
             if(CanDashNow && Input.GetKey(KeyCode.Space))
@@ -169,6 +174,7 @@ public class Player : MonoBehaviour
                     dashBeginTime = Time.time;
                     movementVelocity = dashDirection * movespeed;
                     modelTrans.forward = dashDirection;
+                    dashBar.ResetTime();
                 }
             }
         }
@@ -189,6 +195,7 @@ public class Player : MonoBehaviour
             characterController.enabled = false;
             modelTrans.gameObject.SetActive(false);
             dashBeginTime = Mathf.NegativeInfinity;
+            dashBar.ResetTime();
         }
     }
 
@@ -263,6 +270,8 @@ public class Player : MonoBehaviour
     {
         spawnPoint = trans.position;
         spawnRotation = modelTrans.rotation;
+        dashBar.SetMaxCooldown(dashCooldown);
+        dashBar.StartdashBar();
     }
 
     // Update is called once per frame

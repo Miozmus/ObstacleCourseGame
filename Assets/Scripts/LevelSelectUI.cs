@@ -66,6 +66,7 @@ public class LevelSelectUI : MonoBehaviour
             playerScript.enabled = true;
             //Poprzez skrypt Player uzyskaj dostêp do obiektu kamera i  aktywuj j¹ 
             playerScript.UpViewCam.SetActive(true);
+            
             //Zniszcz obiekt, do którego jest przypisany ten skrypt; obiekt pojawi siê ponownie, gdy g³ówna scena bêdzie znowu ³adowana
             Destroy(this.gameObject);
         }
